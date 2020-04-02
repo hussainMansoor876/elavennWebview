@@ -2,9 +2,9 @@
 import React from 'react';
 import { View, StyleSheet, Dimensions, Text } from 'react-native';
 import { WebView } from 'react-native-webview';
-import NetInfo from "@react-native-community/netinfo";
+import NetInfo from '@react-native-community/netinfo';
 
-const { width } = Dimensions.get("window");
+const { width } = Dimensions.get('window');
 
 function MiniOfflineSign() {
   return (
@@ -18,19 +18,19 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      isConnected: true
+      isConnected: true,
     };
   }
 
   componentDidMount() {
     NetInfo.addEventListener(state => {
-      this.handleConnectivityChange(state.isConnected)
+      this.handleConnectivityChange(state.isConnected);
     });
   }
 
   componentWillUnmount() {
     NetInfo.addEventListener(state => {
-      this.handleConnectivityChange(state.isConnected)
+      this.handleConnectivityChange(state.isConnected);
     });
   }
 
@@ -49,8 +49,9 @@ class App extends React.Component {
     return (
       <View style={{ flex: 1 }}>
         <WebView
-          source={{ uri: 'https://www.elavenn.com/' }}
+          source={{uri: 'https://jos889g.com'}}
           userAgent="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36"
+          originWhitelist={['*']}
           javaScriptEnabled={true}
           domStorageEnabled={true}
           startInLoadingState={true}
@@ -62,16 +63,16 @@ class App extends React.Component {
 
 const styles = StyleSheet.create({
   offlineContainer: {
-    backgroundColor: "#b52424",
+    backgroundColor: '#b52424',
     height: 30,
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "row",
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
     width,
-    position: "absolute",
-    top: 30
+    position: 'absolute',
+    top: 30,
   },
-  offlineText: { color: "#fff" }
+  offlineText: { color: '#fff' },
 });
 
 export default App;
