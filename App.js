@@ -49,7 +49,7 @@ class App extends React.Component {
     return (
       <View style={{ flex: 1 }}>
         <WebView
-          source={{uri: 'https://jos889g.com'}}
+          source={{ uri: 'https://ecarto.co.uk/chat/seller-support' }}
           userAgent="Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36"
           originWhitelist={['*']}
           javaScriptEnabled={true}
