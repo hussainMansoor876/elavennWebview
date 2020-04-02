@@ -3,6 +3,7 @@ import React from 'react';
 import { View, StyleSheet, Dimensions, Text } from 'react-native';
 import { WebView } from 'react-native-webview';
 import NetInfo from '@react-native-community/netinfo';
+import SplashScreen from 'react-native-splash-screen'
 
 const { width } = Dimensions.get('window');
 
